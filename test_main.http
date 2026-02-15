@@ -1,11 +1,18 @@
-# Test your FastAPI endpoints
+# Inforce AI Task — тестування API
 
+### Головна (UI)
 GET http://127.0.0.1:8000/
-Accept: application/json
+Accept: text/html
 
-###
+### Створити сесію
+POST http://127.0.0.1:8000/sessions
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
+### Надіслати повідомлення (підставте session_id з попереднього відповіді)
+POST http://127.0.0.1:8000/sessions/1/messages?message_text=Привіт
+Content-Type: application/json
 
-###
+### Історія сесії
+GET http://127.0.0.1:8000/sessions/1/history
+
+### Docs
+GET http://127.0.0.1:8000/docs

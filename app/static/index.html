@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini 2.5 Chat — Inforce AI Task</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="header">
+      <h1>Gemini 2.5 Flash Chat</h1>
+      <div class="session-info">
+        <span class="cost-label">Накопичена вартість:</span>
+        <span id="total-cost" class="cost-value">$0.00000000</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="chat" class="chat" role="log" aria-live="polite">
+        <p class="chat-placeholder" id="placeholder">Напишіть повідомлення нижче, щоб почати діалог.</p>
+      </div>
+
+      <div id="error-toast" class="toast toast-error" hidden></div>
+      <div id="loading" class="loading" hidden>
+        <span class="loading-dots"></span>
+        <span>AI думає…</span>
+      </div>
+
+      <form id="form" class="form" novalidate>
+        <input
+          type="text"
+          id="message-input"
+          class="input"
+          placeholder="Введіть повідомлення…"
+          autocomplete="off"
+          autofocus
+        />
+        <button type="submit" id="send-btn" class="btn btn-primary">Надіслати</button>
+      </form>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
